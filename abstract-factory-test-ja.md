@@ -5,7 +5,7 @@ content_description: 関連したオブジェクトの集団を、具象クラ�
 
 ## 意図
 
-**Abstract Factory** （抽象ファクトリー=工場) は、生成用デザインパターンのひとつで、関連したオブジェクトの族を、具象クラスを指定することなく生成することを可能とします。
+**Abstract Factory** （抽象ファクトリー=工場) は、生成用デザインパターンのひとつで、関連したオブジェクトの集団を、具象クラスを指定することなく生成することを可能とします。
 
 ![Abstract Factory パターン](/images/patterns/content/abstract-factory/abstract-factory-en.png)
 
