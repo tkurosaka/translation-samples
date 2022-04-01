@@ -1,33 +1,31 @@
 ---
-content_description: Lets you produce families of related objects without specifying their concrete classes.
+content_description: 関連したオブジェクトの族を、具象クラスを指定することなく生成することを可能とします。
 ---
 # Abstract Factory
 
-## Intent
+## 意図
 
-**Abstract Factory** is a creational design pattern that lets you produce families of related objects without specifying their concrete classes.
+**Abstract Factory** （抽象ファクトリー=工場) は、生成用デザインパターンのひとつで、関連したオブジェクトの族を、具象クラスを指定することなく生成することを可能とします。
 
-![Abstract Factory pattern](/images/patterns/content/abstract-factory/abstract-factory-en.png)
+![Abstract Factory パターン](/images/patterns/content/abstract-factory/abstract-factory-en.png)
 
 
-## Problem
+## 問題
 
-Imagine that you're creating a furniture shop simulator. Your code consists of classes that represent:
+家具工場シュミレーターを作ることを想像してみてください。次のようなモノを表現するクラスが必要となります:
 
-1. A family of related products, say: `Chair` + `Sofa` + `CoffeeTable`.
+1. 関連製品、例えば: `Chair` (椅子) + `Sofa` (ソファー) + `CoffeeTable` (コーヒーテーブル）.
 
-2. Several variants of this family. For example, products `Chair` + `Sofa` + `CoffeeTable` are available in these variants: `Modern`, `Victorian`, `ArtDeco`.
+2. この関連製品の様式。`Chair` + `Sofa` + `CoffeeTable` 製品は、例えば以下の様式のものがあります: `Modern` (現代風), `Victorian` (ビクトリア調), `ArtDeco` (アールデコ).
 
-![Product families and their variants.](/images/patterns/diagrams/abstract-factory/problem-en.png)
-> Product families and their variants.
-
-You need a way to create individual furniture objects so that they match other objects of the same family. Customers get quite mad when they receive non-matching furniture.
+![製品群と様式](/images/patterns/diagrams/abstract-factory/problem-en.png)
+> 製品群と様式
+様式がマッチするために、同じ様式の家具オブジェクトを生成する何らかの方法が必要となります。様式の異なる家具が配達されたら、客は怒りますよね。
 
 ![](/images/patterns/content/abstract-factory/abstract-factory-comic-1-en.png)
-> A Modern-style sofa doesn't match Victorian-style chairs.
+> 現代風ソファーは、ビクトリア様式の椅子とは合いません！
 
-Also, you don't want to change existing code when adding new products or families of products to the program. Furniture vendors update their catalogs very often, and you wouldn't want to change the core code each time it happens.
-
+プログラムに新しい製品や製品群を追加する時、コードは変更したくありません。家具メーカーはカタログを常に更新しますが、そのたびにコアのコードを変更するのは避けなければなりません。
 
 ## Solution
 
